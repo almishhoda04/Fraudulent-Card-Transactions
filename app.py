@@ -27,8 +27,8 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
-# Get feature names
-feature_names = [f for f in pd.read_csv('creditcard.csv').columns if f not in ['Time', 'Class', 'Amount']]
+# Hardcode feature names (V1-V28 + Amount)
+feature_names = [f'V{i}' for i in range(1, 29)]
 num_features = len(feature_names)
 
 # Input fields in columns for better UI
